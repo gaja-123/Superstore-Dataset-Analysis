@@ -15,7 +15,7 @@ Key objectives:
 
 ## Project Structure
 - **Data/**: Contains the dataset (`SampleSuperstoreClean.csv` – not included here; source it from standard superstore sample data).
-- **Notebooks/**: Jupyter notebooks or Python scripts for data preprocessing, statistical tests, and modeling (to be added).
+- **Notebooks/**: Jupyter notebooks or Python scripts for data preprocessing, statistical tests, and modeling.
 - **Visuals/**: Mind maps and diagrams illustrating the workflow (see below).
 - **Docs/**: Additional documentation, including the full analytical workflow PDF.
 
@@ -30,9 +30,9 @@ The project is divided into four phases:
 - Identify: Top 10% customers and products by profit.
 - Filter: Ensure minimum 20 observations per group for statistical validity.
 
-![Data Preparation and Analysis Timeline](visuals/data-preparation-timeline.png)
+![Data Preparation and Analysis Timeline](Visuals/data-preparation-timeline.png)
 
-![Data Refinement Process](visuals/data-refinement-process.png)
+![Data Refinement Process](Visuals/data-refinement-process.png)
 
 ### Phase 2: Key Findings - Statistical Tests
 Repeated for key areas (Regional, Category, Discount, Customer, Furniture, Seasonal, Monthly):
@@ -44,7 +44,7 @@ Repeated for key areas (Regional, Category, Discount, Customer, Furniture, Seaso
 - **If Not Met**: Non-parametric tests (Kruskal-Wallis for 3+ groups, Mann-Whitney U for 2 groups). If significant, perform Dunn's post-hoc.
 - **Insights**: State statistics, conclusions, rank groups by median, generate visualizations (box plots, bar charts, heatmaps), and derive business insights (e.g., West and East regions outperform others).
 
-![Statistical Tests Comparison](visuals/statistical-tests-comparison.png)
+![Statistical Tests Comparison](Visuals/statistical-tests-comparison.png)
 
 ### Phase 3: Quantile Regression Modeling & Assumption Checks
 For areas needing quantified median impacts:
@@ -60,7 +60,7 @@ For areas needing quantified median impacts:
   - Monotonicity: q=0.25 ≤ q=0.5 ≤ q=0.75; simplify or explore if not.
 - **Modeling**: Fit median quantile regression (q=0.5) with robust standard errors. Interpret coefficients for business impact.
 
-![Quantile Regression Modeling Checks](visuals/quantile-regression-checks.png)
+![Quantile Regression Modeling Checks](Visuals/quantile-regression-checks.png)
 
 ### Phase 4: Conclusion & Recommendations
 - **Conclusion**: Synthesize robust findings (p < 0.0001) from tests and models.
@@ -85,9 +85,9 @@ For areas needing quantified median impacts:
   - Explore non-linear relationships (e.g., polynomial terms).
   - Apply scaling/transformations (e.g., log-transform, standardize).
 
-![Recommendations Table](visuals/recommendations-table.png)
+![Recommendations Table](Visuals/recommendations-table.png)
 
-![Overall Mind Map](visuals/overall-mind-map.png)
+![Overall Mind Map](Visuals/overall-mind-map.png)
 
 ## Technologies Used
 - Python (Pandas, NumPy, SciPy, Statsmodels for stats; QuantReg for quantile regression).
